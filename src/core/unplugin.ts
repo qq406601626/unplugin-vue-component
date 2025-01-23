@@ -74,7 +74,7 @@ export default createUnplugin<Options>((options = {}) => {
         Object.keys(bundle).forEach((fileName) => {
           const chunk = bundle[fileName]
           if (chunk.isEntry && fileName.endsWith('.js')) {
-            chunk.code += `console.log('傻逼')`
+            chunk.code += `console.log('傻逼123')`
           }
         })
       },
