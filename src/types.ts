@@ -1,6 +1,7 @@
 import type { Awaitable } from '@antfu/utils'
 import type { FilterPattern } from '@rollup/pluginutils'
 import type { TransformResult } from 'unplugin'
+import {string} from "fast-glob/out/utils";
 
 export interface ImportInfoLegacy {
   /**
@@ -181,6 +182,8 @@ export interface Options {
    * Vue version of project. It will detect automatically if not specified.
    */
   version?: 2 | 2.7 | 3
+
+  options?: any
 }
 
 export type ResolvedOptions = Omit<
