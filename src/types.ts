@@ -183,7 +183,7 @@ export interface Options {
    */
   version?: 2 | 2.7 | 3
 
-  options?: any
+  commonChunks?: any
 }
 
 export type ResolvedOptions = Omit<
