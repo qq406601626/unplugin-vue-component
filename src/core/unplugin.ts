@@ -70,7 +70,7 @@ export default createUnplugin<Options>((options = {}) => {
         ctx.setupViteServer(server)
       },
       generateBundle(option: any, bundle: any) {
-        if (!options.options || options.options.mode !== 'server-production') {
+        if (options.options && options.options.server !== 'server-production') {
           return
         }
         Object.keys(bundle).forEach((fileName) => {
